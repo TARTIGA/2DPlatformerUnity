@@ -7,6 +7,7 @@ public class PhysicsObject : MonoBehaviour
     public float gravityModifier = 1f;
     protected Rigidbody2D rb2d;
     protected Vector2 velocity;
+    protected const float minMoveDistance = 0.001f;
 
 
     /// <summary>
@@ -33,6 +34,12 @@ public class PhysicsObject : MonoBehaviour
 
     void Movement(Vector2 move)
     {
+        float distance = move.magnitude;
+
+        if (distance > minMoveDistance)
+        {
+
+        }
         rb2d.position = rb2d.position + move;
     }
 }
