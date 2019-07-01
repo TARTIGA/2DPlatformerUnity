@@ -5,7 +5,6 @@ using UnityEngine;
 public class PhysicsObject : MonoBehaviour
 {
     public float gravityModifier = 1f;
-
     protected Rigidbody2D rb2d;
     protected Vector2 velocity;
 
